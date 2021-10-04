@@ -6,7 +6,7 @@ pip3 install scapy ply
 python3 -m pip install --upgrade pip
 sudo apt-get install -y doxygen graphviz texlive-full
 git clone https://github.com/protocolbuffers/protobuf.git
-cd /home/tcs/protobuf/  
+cd /home/protobuf/  
 git checkout v3.6.1
 git submodule update --init --recursive
 ./autogen.sh
@@ -16,19 +16,19 @@ make check
 sudo make install
 sudo ldconfig
 
-cd /home/tcs/
+cd /home/
 git clone --recursive https://github.com/p4lang/p4c.git
-cd /home/tcs/p4c/ 
+cd /home/p4c/ 
 mkdir build
-cd /home/tcs/p4c/build/ 
+cd /home/p4c/build/ 
 cmake ..
 make -j 4
 make -j 4 check
 sudo make install
 
-cd /home/tcs/
+cd /home/
 git clone https://github.com/p4lang/behavioral-model.git
-cd /home/tcs/behavioral-model/ 
+cd /home/behavioral-model/ 
 ./install_deps.sh
 python3 -m pip install --upgrade pip
 ./autogen.sh
